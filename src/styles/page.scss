@@ -1,0 +1,52 @@
+@import '../styles/variables.scss';
+
+.container{
+  &-main{
+    padding: 15px;
+    h2{
+      text-align: center;
+    }
+  }
+  &-list{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    height: 80%;
+    &__item{
+      width: 250px;
+      height: 160px;
+      cursor: pointer;
+      border: 2px solid $yellow;
+      padding: 10px;
+      background-color: $background;
+      transition: border .3s ease-in-out;
+      &:hover{
+        border: 2px solid $red;
+      }
+
+      h3{
+        color: $red;
+      }
+      div{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        span{
+          span{
+            color: $dimedPrimary;
+          }
+        }
+      }
+
+    }
+  }
+}
+.back_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+

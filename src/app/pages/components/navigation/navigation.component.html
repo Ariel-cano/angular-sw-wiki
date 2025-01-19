@@ -1,0 +1,7 @@
+<div class="navigation">
+  @for(item of navigation; track item.title){
+    <div class="navigation__item" [routerLink]="item.link">
+      <span>{{item.title}}</span>
+    </div>
+  }
+</div>

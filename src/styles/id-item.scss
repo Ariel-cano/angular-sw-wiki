@@ -1,0 +1,28 @@
+@import '../styles/variables.scss';
+
+.id-item{
+  padding: 20px 20px 20px 40px;
+
+
+  &__data{
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+    span{
+      font-size: 20px;
+      letter-spacing: 1px;
+      &:first-child{
+        color: $dimedPrimary;
+      }
+    }
+  }
+  &__links{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    span{
+      color: $primary !important;
+      cursor: pointer;
+    }
+  }
+}

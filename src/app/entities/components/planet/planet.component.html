@@ -1,0 +1,27 @@
+@if (planetData) {
+  <div class="id-item">
+    <h2>{{ planetData.name }}</h2>
+    @for (field of planetData | keyvalue; track $index) {
+      @if (field.key !== 'url' && field.key !== 'edited') {
+          <div class="id-item__data">
+            <span>{{ field.key | formatJson }}:</span>
+            @if( !checkArray(field.value)){
+              @if(field.key !== 'created'){
+                <span>{{field.value}}</span>
+              } @else {
+                <span>{{toString(field.value) | date: 'fullDate'}}</span>
+              }
+            }@else{
+                <div class="id-item__links">
+                  @for(item of field.value; track $index){
+                  <span>{{item}}</span>
+                  }
+                </div>
+            }
+          </div>
+      }
+    }
+  </div>
+} @else {
+  <span>Loading...</span>
+}

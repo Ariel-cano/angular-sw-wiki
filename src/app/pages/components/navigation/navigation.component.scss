@@ -1,0 +1,41 @@
+@import '../../../../styles/variables.scss';
+
+.navigation{
+  padding: 15px;
+  width: 85%;
+  margin: auto;
+  height: 80dvh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 130px;
+  justify-items: center;
+  row-gap: 20px;
+  column-gap: 20px;
+
+  &__item{
+    display: flex;
+    width: 80%;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $yellow;
+    background-color: transparent;
+    transition: background-color 0.22s ease-in-out;
+    cursor: pointer;
+
+    span{
+      font-size: 20px;
+      letter-spacing: 2px;
+
+    }
+    &:hover{
+      background-color: $red;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+    }
+  }
+  &__item:nth-child(6){
+    grid-area: 2/4
+  }
+
+}
